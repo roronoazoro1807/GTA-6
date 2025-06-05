@@ -1,0 +1,54 @@
+# ==========================
+# 🔧 Build and Dependencies
+# ==========================
+node_modules/
+dist/
+dist-ssr/
+.vite/
+
+# ==========================
+# 🧪 Cache / Logs
+# ==========================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.eslintcache
+
+# ==========================
+# 🔐 Environment Files
+# ==========================
+.env
+.env.local
+.env.*.local
+
+# ==========================
+# 🧠 IDEs / Editors
+# ==========================
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ==========================
+# ⚠️ OS/System Files
+# ==========================
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.AppleDouble
+.LSOverride
+Icon?
+
+# ==========================
+# 🗃️ Output / Meta
+# ==========================
+*.local
+*.log
+logs/
