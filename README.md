@@ -70,7 +70,7 @@ const [showContent, setShowContent] = useState(false);
 
 ---
 
-## 🤔 Interview Questions & Answers
+## 🤔 Some Questions & Answers
 
 ### **1. Explain the splash screen animation sequence.**
 

@@ -155,19 +155,19 @@ function App() {
                 src="./bg.png"
                 alt=""
               />
-              <div className="text text-white flex flex-col gap-2 md:gap-3 absolute top-18 left-1/2 -translate-x-1/2 scale-[1.2] rotate-[-10deg] text-center">
-                <h1 className="text-[5rem] md:text-[8rem] lg:text-[12rem] -ml-0 md:-ml-40">
+              <div className="text text-white flex flex-col gap-2 md:gap-3 absolute top-[3%] left-1/2 -translate-x-1/2 scale-[1.2] rotate-[-10deg] text-center">
+                <h1 className="text-[4rem] md:text-[8rem] lg:text-[12rem] -ml-0 md:-ml-40">
                   grand
                 </h1>
-                <h1 className="text-[5rem] md:text-[8rem] lg:text-[12rem] ml-0 md:ml-20">
+                <h1 className="text-[4rem] md:text-[8rem] lg:text-[12rem] ml-0 md:ml-20">
                   theft
                 </h1>
-                <h1 className="text-[5rem] md:text-[8rem] lg:text-[12rem] -ml-0 md:-ml-40">
+                <h1 className="text-[4rem] md:text-[8rem] lg:text-[12rem] -ml-0 md:-ml-40">
                   auto
                 </h1>
               </div>
               <img
-                className="absolute character bottom-[-15%] left-1/2 -translate-x-1/2 scale-[1.2] rotate-[-5deg] max-h-[90vh] object-contain"
+                className="absolute character bottom-[10%] left-1/2 -translate-x-1/2 scale-[1.3] rotate-[-5deg] max-h-[90vh] object-contain"
                 src="./girlbg.png"
                 alt=""
               />
@@ -189,17 +189,21 @@ function App() {
 
           {/* CONTENT SECTION */}
           <div className="w-full min-h-screen bg-black flex items-center justify-center px-4 py-10">
-            <div className="cntnr flex flex-col lg:flex-row flex-wrap gap-10 w-full max-w-[1400px] text-white">
-              <div className="limg w-full lg:w-1/2 h-[300px] lg:h-auto relative flex justify-center items-center">
+            <div className="cntnr flex flex-col lg:flex-row flex-wrap gap-10 w-full max-w-[1400px] px-4 md:px-8 text-white">
+              <div className="limg w-full lg:w-1/2 h-[250px] sm:h-[300px] md:h-[400px] lg:h-auto relative flex justify-center items-center">
                 <img
                   className="max-w-full max-h-full object-contain"
                   src="./imag.png"
                   alt=""
                 />
               </div>
-              <div className="rg w-full lg:w-[40%]">
-                <h1 className="text-4xl md:text-6xl">Still Running,</h1>
-                <h1 className="text-4xl md:text-6xl">Not Hunting</h1>
+              <div className="rg w-full lg:w-[40%] flex flex-col items-center justify-center text-center">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                  Still Running,
+                </h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+                  Not Hunting
+                </h1>
 
                 {/* CLASSY GTA LINES */}
                 <p className="mt-6 text-base md:text-lg font-mono">
@@ -212,7 +216,7 @@ function App() {
                   Born to break rules, built to survive.
                 </p>
 
-                <button className="bg-yellow-500 px-6 py-4 text-black mt-8 text-xl font-bold font-mono tracking-wider">
+                <button className="bg-yellow-500 px-5 py-3 sm:px-6 sm:py-4  text-black mt-8 text-xl font-bold font-mono tracking-wider">
                   Download Now
                 </button>
               </div>
