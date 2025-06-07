@@ -78,18 +78,24 @@ function App() {
 
     const main = document.querySelector(".main");
 
-    main?.addEventListener("mousemove", function (e) {
-      const xMove = (e.clientX / window.innerWidth - 0.5) * 40;
-      gsap.to(".main .text", {
-        x: `${xMove * 0.4}%`,
-      });
-      gsap.to(".sky", {
-        x: xMove,
-      });
-      gsap.to(".bg", {
-        x: xMove * 1.7,
-      });
-    });
+    const handleMove = (e) => {
+      let clientX;
+
+      if (e.type === "touchmove") {
+        clientX = e.touches[0].clientX;
+      } else {
+        clientX = e.clientX;
+      }
+
+      const xMove = (clientX / window.innerWidth - 0.5) * 40;
+
+      gsap.to(".main .text", { x: `${xMove * 0.4}%` });
+      gsap.to(".sky", { x: xMove });
+      gsap.to(".bg", { x: xMove * 1.7 });
+    };
+
+    main?.addEventListener("mousemove", handleMove);
+    main?.addEventListener("touchmove", handleMove);
   }, [showContent]);
 
   return (
@@ -174,16 +180,13 @@ function App() {
             </div>
 
             {/* BOTTOM ICONS */}
-            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-6 px-6 md:px-10 bg-gradient-to-t from-black to-transparent">
-              <div className="flex items-center gap-3">
-                <i className="text-3xl md:text-4xl ri-arrow-down-line"></i>
-                <h3 className="text-lg md:text-xl font-mono">Scroll Down</h3>
+            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-6 px-6 md:px-10 bg-gradient-to-t from-black to-transparent z-10 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <i className="text-2xl md:text-3xl ri-arrow-down-line"></i>
+                <h3 className="text-sm md:text-lg font-mono">Scroll Down</h3>
               </div>
-              <img
-                className="absolute h-[55px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                src="./ps5.png"
-                alt=""
-              />
+
+              <img className=" h-[35px] md:h-[55px]" src="./ps5.png" alt="" />
             </div>
           </div>
 
