@@ -1,9 +1,12 @@
 name: Website Uptime Monitor
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: "0 */12 * * 1-5" # every 12 hours (Mon-Fri)
-  workflow_dispatch: # allow manual run
+    - cron: "0 */12 * * 1-5"
+  workflow_dispatch:
 
 permissions:
   contents: write
