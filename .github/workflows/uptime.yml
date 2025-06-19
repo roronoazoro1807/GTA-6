@@ -32,9 +32,6 @@ jobs:
           sites: |
             https://gta-6-dun.vercel.app/
           timezone: "Asia/Kolkata"
-          log-file: "logs/uptime-monitor.log"
-          persist-logs: false
-          commit-message: "📊 Uptime monitor log update"
           timeout: "10"
           success-codes: "200,201,204,301,302"
           max-concurrent: "3"
