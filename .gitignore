@@ -52,5 +52,6 @@ Icon?
 *.local
 *.log
 logs/
-!logs/uptime-monitor.log
+!uptime-monitor-results.log
+
 
