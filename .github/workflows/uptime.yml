@@ -1,0 +1,34 @@
+name: Website Uptime Monitor
+
+on:
+  schedule:
+    - cron: "0 */12 * * 1-5" # every 12 hours (Mon-Fri)
+  workflow_dispatch: # allow manual run
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  uptime-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Monitor websites
+        uses: cd-roman/uptime-monitor@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          sites: |
+            https://gta-6-dun.vercel.app/
+          timezone: "Asia/Kolkata"
+          log-file: "logs/uptime-monitor.log"
+          commit-message: "📊 Uptime monitor log update"
+          timeout: "10"
+          success-codes: "200,201,204,301,302"
+          max-concurrent: "3"
+          create-issue: "true"
