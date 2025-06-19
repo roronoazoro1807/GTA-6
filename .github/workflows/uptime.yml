@@ -32,3 +32,4 @@ jobs:
           success-codes: "200,201,204,301,302"
           max-concurrent: "3"
           create-issue: "true"
+# force workflow detection
